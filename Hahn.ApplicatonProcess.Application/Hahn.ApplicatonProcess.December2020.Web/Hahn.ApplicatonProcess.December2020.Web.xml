@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Hahn.ApplicatonProcess.December2020.Web</name>
+    </assembly>
+    <members>
+        <member name="M:Hahn.ApplicatonProcess.December2020.Web.Controllers.ApplicantController.AddApplicant(Hahn.ApplicatonProcess.December2020.Domain.Models.ApplicantToAddDTO)">
+            <summary>
+            Adds an Applicant 
+            </summary>
+            <param name="applicant"></param>
+        </member>
+        <member name="M:Hahn.ApplicatonProcess.December2020.Web.Controllers.ApplicantController.GetApplicant(System.Int32)">
+            <summary>
+            Gets a specific Applicant by Id
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hahn.ApplicatonProcess.December2020.Web.Controllers.ApplicantController.DeleteApplicant(System.Int32)">
+            <summary>
+            Deletes a specific applicant
+            </summary>
+        </member>
+        <member name="M:Hahn.ApplicatonProcess.December2020.Web.Controllers.ApplicantController.GetApplicants">
+            <summary>
+            Get all applicants
+            </summary>
+        </member>
+        <member name="M:Hahn.ApplicatonProcess.December2020.Web.Controllers.ApplicantController.UpdateApplicant(Hahn.ApplicatonProcess.December2020.Domain.Applicant)">
+            <summary>
+            Updates a specifc applicant
+            </summary>
+        </member>
+    </members>
+</doc>

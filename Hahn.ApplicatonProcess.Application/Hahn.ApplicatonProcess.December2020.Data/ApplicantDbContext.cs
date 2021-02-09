@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Hahn.ApplicatonProcess.December2020.Data
 {
-    class ApplicationDbContext : DbContext
+    public class ApplicantDbContext : DbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base (options) { }
+        public ApplicantDbContext(DbContextOptions<ApplicantDbContext> options) : base (options) { }
 
         public DbSet<Applicant> Applicants { get; set; }
     }

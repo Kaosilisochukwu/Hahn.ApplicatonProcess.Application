@@ -1,33 +1,49 @@
-# `HahnProjectUI`
+# How to start the application
 
-This project is bootstrapped by [aurelia-cli](https://github.com/aurelia/cli).
+After unzipping the project
 
-For more information, go to https://aurelia.io/docs/cli/webpack
+## Step 1 - How to start the API
 
-## Run dev app
+- Change directories using the command prompt to run the API.
 
-Run `npm start`, then open `http://localhost:8080`
+  ```cmd
+      cd Hahn.ApplicationProcess.Application\WebApi>
+  ```
 
-You can change the standard webpack configurations from CLI easily with something like this: `npm start -- --open --port 8888`. However, it is better to change the respective npm scripts or `webpack.config.js` with these options, as per your need.
+- After that, do a dotnet restore the output of that command is shown below.
 
-To enable Webpack Bundle Analyzer, do `npm run analyze` (production build).
+```cmd
+cd Hahn.ApplicationProcess.December2020.Web
+```
 
-To enable hot module reload, do `npm start -- --hmr`.
+- After the change you will be right here 🎉
 
-To change dev server port, do `npm start -- --port 8888`.
+  ```cmd
+       Han.December2020\WebApi\Hahn.ApplicationProcess.December2020.Web>
+  ```
 
-To change dev server host, do `npm start -- --host 127.0.0.1`
+- Do a dotnet run the output should be the result shown below.
 
-**PS:** You could mix all the flags as well, `npm start -- --host 127.0.0.1 --port 7070 --open --hmr`
+## Step 2 - How to start the FRONTEND/UI
 
-For long time aurelia-cli user, you can still use `au run` with those arguments like `au run --env prod --open --hmr`. But `au run` now simply executes `npm start` command.
+- Open a new terminal and change directory to Aurelia/applicant-ui
 
-## Build for production
+```cmd
+   Hahn.ApplicationProcess.Application\Aurelia\applicant-ui
+```
 
-Run `npm run build`, or the old way `au build --env prod`.
+- Do an npm install to install all the necessary dependencies
 
-## Unit tests
+- After the installation type npm start to start the application
 
-Run `au test` (or `au jest`).
+- Navigate to the url http://localhost:8080/ on your favorite browser
 
-To run in watch mode, `au test --watch` or `au jest --watch`.
+- You will be greeted by the page below for adding an applicant.
+
+- After a successful registration an applicant is redirected to the confirmation page below
+
+## Extra features
+
+- A dashboard for updating applicants and also deleting applicants
+
+- The dashboard is also paginated 6 records per-page

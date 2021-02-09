@@ -2,6 +2,7 @@ import { IRegister } from "applicants-service"
 import { autoinject } from 'aurelia-framework'
 import {BootstrapFormRenderer}from './bootstrap-formrender'
 import {ValidationControllerFactory,ValidationRules} from "aurelia-validation"
+import {RouterConfiguration, Router} from 'aurelia-router';
 //import 'fetch';
 import {HttpClient, json} from 'aurelia-fetch-client';
 import { config } from "process";
@@ -21,7 +22,7 @@ countries = countries.result.map(m => m.name);
   hired = "false"
   controller: any
   http: HttpClient;
-constructor(controllerFactory:ValidationControllerFactory,http:HttpClient){
+constructor(controllerFactory:ValidationControllerFactory,http:HttpClient, private router:Router){
   this.controller = controllerFactory.createForCurrentScope();
   this.controller.addRenderer(new BootstrapFormRenderer());
   this.http = http;
@@ -104,6 +105,9 @@ if(enableButton && (this.age > 20 && this.age < 60)){
    const res = await this.http.fetch("http://localhost:5000/api/applicant",config)
    const result = await res.json();
    console.log("res",result)
+   if(res.ok)
+      alert("Applicant successfully added")
+   this.router.navigate("/")
   }
   styleObject = "position: absolute; top: 0; background-color: rgba(0, 0, 0, 0.639); color: white; height: 100vh; width: 100%; display: none; justify-content: center; align-items: center;"
 }

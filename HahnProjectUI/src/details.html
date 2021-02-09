@@ -10,7 +10,7 @@
         <h3 class="card-title">Country: ${applicant.countryOfOrigin}</h3>
         <div class="d-flex justify-content-between">            
           <a onclick.delegate="editApplicant()" href="#" class="btn btn-primary" route-href="route: edit; params.bind: {id:applicant.id}">Edit</a>
-          <a href="#" class="btn btn-outline-danger">Delete</a>
+          <button route-href="" class="btn btn-outline-danger" click.trigger="delete()">Delete</button>
         </div>
       </div>
     </div>

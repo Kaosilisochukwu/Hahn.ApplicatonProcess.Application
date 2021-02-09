@@ -81,7 +81,34 @@ activate(params) {
     this.hired = data.hired
  } ); 
 }
+disabled = false
 
+disableCancelButton():void{
+  this.firstName = ""
+  this.familyName = ""
+  this.email = ""
+  this.age = 0
+  this.address = ""
+  this.country = ""
+  this.hired = "false"
+  this.disabled = true;
+}
+disableButton():void {
+const lengthOfString = [
+  this.firstName,
+  this.address,
+  this.email,
+  this.familyName,
+  this.country,
+  
+]
+const enableButton = lengthOfString.every(x=> x.length > 0);
+if(enableButton && (this.age > 20 && this.age < 60)){
+  this.disabled = false;
+}else{
+  this.disabled = true;
+}
+}
 
 async addApplicant():Promise<any> {
   

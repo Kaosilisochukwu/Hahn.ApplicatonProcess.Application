@@ -1,0 +1,18 @@
+<template>
+  <div class="container" style="width: 100%;">
+    <h1>Profile Page</h1>
+    <div class="d-flex justify-content-between" style="margin: auto; border: 1px solid rgb(221, 209, 209);">
+      <img class="" src="../static/avatar.jpg" alt="Card image" style="width:400px; height: 350px;">
+      <div class="card-body">
+        <h1 style="font-weight: 500;">${applicant.name} ${applicant.familyName}</h1>
+        <h3>Email: ${applicant.emailAddress}</h3>
+        <h3 class="card-text"> Address: ${applicant.address}</h3>
+        <h3 class="card-title">Country: ${applicant.countryOfOrigin}</h3>
+        <div class="d-flex justify-content-between">            
+          <a onclick.delegate="editApplicant()" href="#" class="btn btn-primary" route-href="route: edit; params.bind: {id:applicant.id}">Edit</a>
+          <a href="#" class="btn btn-outline-danger">Delete</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

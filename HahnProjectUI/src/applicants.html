@@ -1,0 +1,31 @@
+<template>
+  
+  <div class="container">
+    <h1 style="margin-bottom: 30px;">Applicants Table</h1>
+    <div class="row">
+      <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">FirstName</th>
+            <th scope="col">Family Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Hired</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr  repeat.for="applicant of applicants">
+            <th scope="row">${applicant.id}</th>
+            <td>${applicant.name}</td>
+            <td>${applicant.familyName}</td>
+            <td>${applicant.emailAddress}</td>
+            <td>${applicant.hired}</td>
+            <td><a  class="btn btn-primary" route-href="route: details; params.bind: {id:applicant.id}">Details</a></td>
+          </tr>
+          <tr>
+        </tbody>
+      </table>
+    </div> 
+  </div>
+</template>

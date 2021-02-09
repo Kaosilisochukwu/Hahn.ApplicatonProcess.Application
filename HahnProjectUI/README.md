@@ -7,7 +7,7 @@ After unzipping the project
 - Change directories using the command prompt to run the API.
 
   ```cmd
-      cd Hahn.ApplicationProcess.Application\WebApi>
+      cd HahnProject\Hahn.ApplicatonProcess.Application>
   ```
 
 - After that, do a dotnet restore the output of that command is shown below.
@@ -19,17 +19,17 @@ cd Hahn.ApplicationProcess.December2020.Web
 - After the change you will be right here 🎉
 
   ```cmd
-       Han.December2020\WebApi\Hahn.ApplicationProcess.December2020.Web>
+       HahnProject\Hahn.ApplicatonProcess.Application\Hahn.ApplicationProcess.December2020.Web>
   ```
 
 - Do a dotnet run the output should be the result shown below.
 
 ## Step 2 - How to start the FRONTEND/UI
 
-- Open a new terminal and change directory to Aurelia/applicant-ui
+- Open a new terminal and change directory to HahnProject\HahnProjectUI
 
 ```cmd
-   Hahn.ApplicationProcess.Application\Aurelia\applicant-ui
+   Hahn.ApplicationProcess.Application\HahnProjectUI
 ```
 
 - Do an npm install to install all the necessary dependencies
@@ -45,5 +45,3 @@ cd Hahn.ApplicationProcess.December2020.Web
 ## Extra features
 
 - A dashboard for updating applicants and also deleting applicants
-
-- The dashboard is also paginated 6 records per-page
